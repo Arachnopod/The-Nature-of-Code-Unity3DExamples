@@ -2,9 +2,11 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Convertion to C# for Unity 3D 3.5.7
+// Converted to C# for Unity 3D 3.5.7
 // Joseph Fiola
 // http://www.joefiola.com
+
+// Example 1-1: Bouncing Ball, no vectors
 
 using UnityEngine;
 using System.Collections;
@@ -13,45 +15,34 @@ public class NOC_1_1_bouncingball_novectors : MonoBehaviour {
 	
 	
 	public Transform target;		//GameObject to bounce around
-	public float x = 0.0f;
-	public float y = 0.0f;
-	public float xspeed = 0.0f;
-	public float yspeed = 0.0f;
+	private float x = 0.5f;			//x position of GameObject
+	private float y = 0.5f;			//y position of GameObject
+	private float z = 20.0f;		//z position of GameObject
+	public float xspeed = 0.0f;		//adjust x speed in editor inspector window 
+	public float yspeed = 0.0f;		//adjust y speed in editor inspector window 
 	
 	void setup()
 	{
 	}
 
 	
-	// Update is called once per frame
 	void Update () {
 	
-		//convert 3D space to screen space
-		Vector3 viewPos = camera.WorldToViewportPoint(target.position);
-		Vector3 worldPos = camera.ViewportToWorldPoint(viewPos);
-		
-		//x = x + xspeed;
-		//y = y + yspeed;
-		
-		print ("Balls is at " + x +"  "+ y + " while viewPos.x = " + viewPos.x);
-		print (worldPos.x);
-		
-		//worldPos.x = x;
-		//worldPos.y = y;
-		
-		//target.Translate(x,y,0);
-		target.position = worldPos;
+		// Add the current speed to the location.
+		x = x + xspeed;
+		y = y + yspeed;
 		
 
-		if (viewPos.x > 1){
-			//worldPos = camera.ViewportToWorldPoint(1.0,worldPos.y,0.0);
+
+		if (x > 1 || x < 0){
 			xspeed = xspeed * -1.0f;
 		}
-//		if (viewPos.y > 1.0f){
-//			yspeed = yspeed * -1.0f;
-//			y = 0.0f;
-//		}				
-
+		if (y > 1 || y < 0){
+			yspeed = yspeed * -1.0f;
+		}
+		
+		// Display GameObject at x location
+		target.position = camera.ViewportToWorldPoint(new Vector3(x,y,z));
 	}
 }
 
