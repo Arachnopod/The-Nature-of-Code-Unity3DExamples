@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\chp1_vectors\NOC_1_1_bouncingball_novectors\NOC_1_1_bouncingball_novectors.cs" />
+     <Compile Include="Assets\chp1_vectors\NOC_1_2_bouncingball_vectors\NOC_1_2_bouncingball_vectors.cs" />
      <None Include="Assets\chp5_physicslibraries\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
