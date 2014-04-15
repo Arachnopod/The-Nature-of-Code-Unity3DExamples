@@ -14,9 +14,6 @@ using System.Collections;
 public class NOC_1_3_vector_subtraction : MonoBehaviour {
 
 
-
-	
-
 	void setup()
 	{
 	}

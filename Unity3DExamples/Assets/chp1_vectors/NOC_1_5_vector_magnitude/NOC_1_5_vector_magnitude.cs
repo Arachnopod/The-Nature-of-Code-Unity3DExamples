@@ -6,25 +6,31 @@
 // Joseph Fiola
 // http://www.joefiola.com
 
-// Example 1-4: Vector multiplication
+// Example 1-5: Vector magnitude
 
 using UnityEngine;
 using System.Collections;
 
-public class NOC_1_4_vector_multiplication : MonoBehaviour {
-
+public class NOC_1_5_vector_magnitude : MonoBehaviour {
+	
+	public Transform rect;
 
 	void setup()
 	{
 	}
-
+	
 	
 	void Update () {
+		
 				
 		Vector3 mouse = camera.ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,camera.nearClipPlane));
 		
-		mouse *= 0.5f;
 		
+		float m = mouse.magnitude;
+		print (m);
+		rect.transform.localScale = new Vector3(m,1,1);
+		
+			
 		LineRenderer line = GetComponent<LineRenderer>();	
 		line.SetPosition(0,new Vector3(0.0f,0.0f,camera.nearClipPlane+1.0f));
 		line.SetPosition(1,mouse);
