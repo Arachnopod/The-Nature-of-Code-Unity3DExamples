@@ -12,7 +12,9 @@ using UnityEngine;
 using System.Collections;
 
 public class NOC_1_3_vector_subtraction : MonoBehaviour {
-	
+
+
+
 	
 
 	void setup()
@@ -22,14 +24,14 @@ public class NOC_1_3_vector_subtraction : MonoBehaviour {
 	
 	void Update () {
 		
-		
-		Vector3 mouse = Input.mousePosition;
-		mouse = camera.ScreenToViewportPoint(mouse);
-
+		// Although the folloing code gets the same results as the Processing example, it is not using any Vector Substaction
+		// if anybody has any idea how to implement vector substraction to make this example relative to the book, please let me know
+				
+		Vector3 mouse = camera.ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,camera.nearClipPlane));
 
 		LineRenderer line = GetComponent<LineRenderer>();	
-		line.SetPosition(1,camera.ViewportToWorldPoint(new Vector3(mouse.x,mouse.y,20))); // set ending point of line
-		
+		line.SetPosition(0,new Vector3(0.0f,0.0f,camera.nearClipPlane+1.0f));
+		line.SetPosition(1,mouse);
 
 	}
 }

@@ -25,7 +25,7 @@ public class NOC_1_2_bouncingball_vectors : MonoBehaviour {
 	void Update () {
 	
 		// Add the current speed to the location.
-		location = location + velocity;
+		location += velocity;
 		
 		if (location.x > 1 || location.x < 0){
 			velocity.x = velocity.x * -1.0f;
