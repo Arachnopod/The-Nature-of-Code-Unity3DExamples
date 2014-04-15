@@ -49,6 +49,7 @@
      <Compile Include="Assets\chp1_vectors\NOC_1_3_vector_subtraction\NOC_1_3_vector_subtraction.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_4_vector_multiplication\NOC_1_4_vector_multiplication.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_5_vector_magnitude\NOC_1_5_vector_magnitude.cs" />
+     <Compile Include="Assets\chp1_vectors\NOC_1_6_vector_normalize\NOC_1_6_vector_normalize.cs" />
      <None Include="Assets\chp5_physicslibraries\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
