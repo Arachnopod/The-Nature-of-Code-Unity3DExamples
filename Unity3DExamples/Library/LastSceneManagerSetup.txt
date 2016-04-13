@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/chp0_introduction/01_NOC_I_1_RandomWalkTraditional3/NOC_I_1_RandomWalkTraditional3.unity
+  isLoaded: 1
+  isActive: 1

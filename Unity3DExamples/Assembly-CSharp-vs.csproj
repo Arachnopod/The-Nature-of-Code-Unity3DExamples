@@ -44,12 +44,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\chp0_introduction\Exercise_I_1_WalkerTendsToDownRight\Exercise_I_1_WalkerTendsToDownRight.cs" />
+     <Compile Include="Assets\chp0_introduction\Exercise_I_1_WalkerTendsToDownRight\Walker_I_1.cs" />
+     <Compile Include="Assets\chp0_introduction\NOC_I_1_RandomWalkTraditional\NOC_I_1_RandomWalkTraditional.cs" />
+     <Compile Include="Assets\chp0_introduction\NOC_I_1_RandomWalkTraditional\Walker.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_1_bouncingball_novectors\NOC_1_1_bouncingball_novectors.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_2_bouncingball_vectors\NOC_1_2_bouncingball_vectors.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_3_vector_subtraction\NOC_1_3_vector_subtraction.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_4_vector_multiplication\NOC_1_4_vector_multiplication.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_5_vector_magnitude\NOC_1_5_vector_magnitude.cs" />
      <Compile Include="Assets\chp1_vectors\NOC_1_6_vector_normalize\NOC_1_6_vector_normalize.cs" />
+     <Compile Include="Assets\chp1_vectors\NOC_1_7_motion101\Mover.cs" />
+     <Compile Include="Assets\chp1_vectors\NOC_1_7_motion101\NOC_1_7_motion101.cs" />
      <None Include="Assets\chp5_physicslibraries\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

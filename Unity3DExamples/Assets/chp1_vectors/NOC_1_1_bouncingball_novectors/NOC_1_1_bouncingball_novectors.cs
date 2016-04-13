@@ -42,7 +42,7 @@ public class NOC_1_1_bouncingball_novectors : MonoBehaviour {
 		}
 		
 		// Display GameObject at x location
-		target.position = camera.ViewportToWorldPoint(new Vector3(x,y,z));
+		target.position = GetComponent<Camera>().ViewportToWorldPoint(new Vector3(x,y,z));
 	}
 }
 

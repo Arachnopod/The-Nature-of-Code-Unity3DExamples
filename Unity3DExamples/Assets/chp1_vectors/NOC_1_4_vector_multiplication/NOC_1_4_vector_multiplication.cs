@@ -21,12 +21,12 @@ public class NOC_1_4_vector_multiplication : MonoBehaviour {
 	
 	void Update () {
 				
-		Vector3 mouse = camera.ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,camera.nearClipPlane));
+		Vector3 mouse = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,GetComponent<Camera>().nearClipPlane));
 		
 		mouse *= 0.5f;
 		
 		LineRenderer line = GetComponent<LineRenderer>();	
-		line.SetPosition(0,new Vector3(0.0f,0.0f,camera.nearClipPlane+1.0f));
+		line.SetPosition(0,new Vector3(0.0f,0.0f,GetComponent<Camera>().nearClipPlane+1.0f));
 		line.SetPosition(1,mouse);
 
 	}

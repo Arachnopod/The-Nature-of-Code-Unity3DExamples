@@ -23,7 +23,7 @@ public class NOC_1_5_vector_magnitude : MonoBehaviour {
 	void Update () {
 		
 				
-		Vector3 mouse = camera.ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,camera.nearClipPlane));
+		Vector3 mouse = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition+new Vector3(0.0f,0.0f,GetComponent<Camera>().nearClipPlane));
 		
 		
 		float m = mouse.magnitude;
@@ -32,7 +32,7 @@ public class NOC_1_5_vector_magnitude : MonoBehaviour {
 		
 			
 		LineRenderer line = GetComponent<LineRenderer>();	
-		line.SetPosition(0,new Vector3(0.0f,0.0f,camera.nearClipPlane+1.0f));
+		line.SetPosition(0,new Vector3(0.0f,0.0f,GetComponent<Camera>().nearClipPlane+1.0f));
 		line.SetPosition(1,mouse);
 
 	}
